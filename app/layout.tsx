@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rashiagrawal.com"),
+  metadataBase: new URL("https://rashis.netlify.app"),
   title: "Rashi Agrawal | Customer Operations Professional | Remote Operations Specialist",
   description:
     "Customer-focused operations professional with 5+ years experience in enterprise consulting and services-driven startups. Specializing in customer operations, quality review, and remote team collaboration.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Rashi Agrawal | Customer Operations Professional",
     description:
       "Customer-focused operations professional with 5+ years experience in enterprise consulting and services-driven startups.",
-    url: "https://rashiagrawal.com",
+    url: "https://rashis.netlify.app",
     siteName: "Rashi Agrawal",
     images: [
       {

@@ -32,7 +32,7 @@ export default function Home() {
       "Process Optimization",
       "Remote Team Collaboration",
     ],
-    url: "https://rashiagrawal.com",
+    url: "https://rashis.netlify.app",
   };
 
   return (
