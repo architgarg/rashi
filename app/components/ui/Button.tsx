@@ -1,16 +1,19 @@
 "use client";
 
-import { ButtonHTMLAttributes, ReactNode } from "react";
 import classNames from "classnames";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
+interface ButtonProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
   variant?: "primary" | "secondary" | "outline";
   size?: "small" | "medium" | "large";
   children: ReactNode;
   href?: string;
   target?: string;
   rel?: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+  onClick?: (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => void;
 }
 
 export default function Button({
@@ -25,11 +28,10 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+    "cursor-pointer inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary:
-      "bg-[#1a1a1a] text-white hover:bg-[#2a2a2a] focus:ring-[#1a1a1a]",
+    primary: "bg-[#1a1a1a] text-white hover:bg-[#2a2a2a] focus:ring-[#1a1a1a]",
     secondary:
       "bg-[#7a8f7f] text-white hover:bg-[#6a7f6f] focus:ring-[#7a8f7f]",
     outline:
@@ -51,12 +53,7 @@ export default function Button({
 
   if (href && !onClick) {
     return (
-      <a
-        href={href}
-        target={target}
-        rel={rel}
-        className={classes}
-      >
+      <a href={href} target={target} rel={rel} className={classes}>
         {children}
       </a>
     );

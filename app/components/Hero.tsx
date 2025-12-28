@@ -1,6 +1,7 @@
 "use client";
 
 import { resumeData } from "@/lib/content";
+import { downloadResume } from "@/lib/utils";
 import Button from "./ui/Button";
 import Section from "./ui/Section";
 
@@ -44,13 +45,7 @@ export default function Hero() {
           >
             Schedule a Call
           </Button>
-          <Button
-            variant="outline"
-            size="large"
-            onClick={() => {
-              console.log("Download resume clicked");
-            }}
-          >
+          <Button variant="outline" size="large" onClick={downloadResume}>
             Download Resume
           </Button>
         </div>

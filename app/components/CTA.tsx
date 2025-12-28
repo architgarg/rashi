@@ -1,8 +1,9 @@
 "use client";
 
-import Section from "./ui/Section";
-import Button from "./ui/Button";
 import { resumeData } from "@/lib/content";
+import { downloadResume } from "@/lib/utils";
+import Button from "./ui/Button";
+import Section from "./ui/Section";
 
 export default function CTA() {
   return (
@@ -12,7 +13,7 @@ export default function CTA() {
           Ready to Connect?
         </h2>
         <p className="text-lg text-gray-300 mb-8">
-          Let's discuss how I can contribute to your team's success.
+          Let&apos;s discuss how I can contribute to your team&apos;s success.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
@@ -25,28 +26,18 @@ export default function CTA() {
           <Button
             variant="outline"
             size="large"
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/rashi-agrawal-a2b9a627a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-white text-white hover:bg-white hover:text-[#1a1a1a]"
+            className="border-white text-white hover:bg-green-300/10 hover:text-[#1a1a1a]"
           >
             LinkedIn
           </Button>
           <Button
             variant="outline"
             size="large"
-            href={`mailto:${resumeData.contact.email}?subject=Schedule a Call`}
-            className="border-white text-white hover:bg-white hover:text-[#1a1a1a]"
-          >
-            Schedule Call
-          </Button>
-          <Button
-            variant="outline"
-            size="large"
-            onClick={() => {
-              console.log("Download resume clicked");
-            }}
-            className="border-white text-white hover:bg-white hover:text-[#1a1a1a]"
+            onClick={downloadResume}
+            className="border-white text-white hover:bg-green-300/10 hover:text-[#1a1a1a] cursor-pointer"
           >
             Download Resume
           </Button>
