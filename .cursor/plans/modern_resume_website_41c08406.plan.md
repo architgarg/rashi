@@ -296,9 +296,3 @@ Create these images and place in `/public/` directory:
 - **No external dependencies** beyond what's installed
 - **CSS-in-Tailwind**: Leverage Tailwind v4's improved utilities
 - **TypeScript**: Full type safety across all components
-- **Performance**: Code splitting with Next.js, optimized fonts
-- **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation
-
-## Why This Design Appeals to Recruiters
-
-1. **Scanability**: Clear sections, visual hierarchy, key info upfront
