@@ -1,4 +1,5 @@
 import { resumeData } from "@/lib/content";
+import Image from "next/image";
 
 export default function PortfolioHero() {
   return (
@@ -7,6 +8,16 @@ export default function PortfolioHero() {
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <div className="max-w-2xl">
+              <div className="flex justify-start mb-6">
+                <div className="relative w-20 h-20">
+                  <Image
+                    src="/head.png"
+                    alt="Rashi"
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                </div>
+              </div>
               <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
                 👋 I&apos;m Rashi!
               </h1>
