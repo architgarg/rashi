@@ -18,4 +18,3 @@ export function downloadFile(url: string, filename?: string): void {
 export function downloadResume(): void {
   downloadFile("/rashi_resume.pdf", "rashi_resume.pdf");
 }
-

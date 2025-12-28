@@ -1,12 +1,12 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import AdditionalInfo from "./components/AdditionalInfo";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+import PortfolioAbout from "./components/PortfolioAbout";
+import PortfolioAdditionalHighlights from "./components/PortfolioAdditionalHighlights";
+import PortfolioContact from "./components/PortfolioContact";
+import PortfolioEducation from "./components/PortfolioEducation";
+import PortfolioExperience from "./components/PortfolioExperience";
+import PortfolioFooter from "./components/PortfolioFooter";
+import PortfolioHeader from "./components/PortfolioHeader";
+import PortfolioHero from "./components/PortfolioHero";
+import PortfolioSkills from "./components/PortfolioSkills";
 
 export default function Home() {
   const jsonLd = {
@@ -41,17 +41,40 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="min-h-screen">
-        <Header />
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Education />
-        <AdditionalInfo />
-        <CTA />
-        <Footer />
-      </main>
+      <div className="flex w-full">
+        <div className="fixed inset-0 flex justify-center sm:px-8">
+          <div className="flex w-full max-w-7xl lg:px-8">
+            <div className="w-full bg-white ring-1 ring-zinc-100"></div>
+          </div>
+        </div>
+        <div className="relative flex w-full flex-col">
+          <PortfolioHeader />
+          <div
+            className="flex-none"
+            style={{ height: "var(--content-offset, 4rem)" }}
+          ></div>
+          <main className="flex-auto">
+            <PortfolioHero />
+            <div id="about">
+              <PortfolioAbout />
+            </div>
+            <div id="experience">
+              <PortfolioExperience />
+            </div>
+            <div id="education">
+              <PortfolioEducation />
+            </div>
+            <PortfolioAdditionalHighlights />
+            <div id="skills">
+              <PortfolioSkills />
+            </div>
+            <div id="contact">
+              <PortfolioContact />
+            </div>
+            <PortfolioFooter />
+          </main>
+        </div>
+      </div>
     </>
   );
 }
